@@ -67,7 +67,8 @@ export default function BookingPage() {
           user_id: userId,
           doctor_id: selectedDoctor.id,
           appointment_date: appointmentDate,
-          notes: notes || ''
+          notes: notes || '',
+          status: 'pending' 
         }
       ])
 
