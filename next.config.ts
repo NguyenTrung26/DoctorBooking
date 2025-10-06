@@ -1,13 +1,17 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  eslint: {
-    // Bỏ qua lỗi ESLint khi build trên Render
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    // Bỏ qua lỗi TypeScript khi build
-    ignoreBuildErrors: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "i.pravatar.cc",
+      },
+      {
+        protocol: "https",
+        hostname: "your-supabase-project.supabase.co", // nếu ảnh bác sĩ lưu ở Supabase Storage
+      },
+    ],
   },
 };
 
